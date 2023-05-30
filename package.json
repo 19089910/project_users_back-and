@@ -1,9 +1,30 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "init": "^0.1.2"
+    "init": "^0.1.2",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "name": "project_users-b",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/19089910/project_users_back-and.git"
+  },
+  "author": "Lucas Barbosa <lucasbarbosaferreira.lb@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/19089910/project_users_back-and/issues"
+  },
+  "homepage": "https://github.com/19089910/project_users_back-and#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "description": ""
 }
