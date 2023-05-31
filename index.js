@@ -11,10 +11,10 @@ const users = []//banco de dados
 
 const checkOrdersId = (request, response, next) => { 
     const { id } = request.params 
-    const index = orders.findIndex(user => user.id == id) 
+    const index = users.findIndex(user => user.id == id) 
  
-    request.orderId = id 
-    request.orderIndex = index 
+    request.userId = id 
+    request.userIndex = index 
      
     if(index < 0){ 
         return response.status(404).json({error: "order not found"}) 
@@ -31,6 +31,13 @@ app.post('/users', (request, response) => {
 
 app.get('/users', (request, response)=> { 
     return response.status(200).json(users) 
+});
+
+app.delete('/users/:id', checkOrdersId, (request, response) => { 
+      const index = request.userIndex 
+      users.splice(index,1) 
+   
+      return response.status(204).json() 
 });
 
 app.listen(port, () => {
